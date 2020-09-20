@@ -14,7 +14,6 @@ namespace PromotionEngine
 
         static void Main(string[] args)
         {
-
             Program objProgram = new Program(new ProductService());
             objProgram.Start();
         }
@@ -36,7 +35,7 @@ namespace PromotionEngine
                     }
                 }
                 int totalPrice = productService.GetTotalPrice(products);
-                Console.WriteLine("Total Price is " + totalPrice);
+                Console.WriteLine($"Total Price is {totalPrice}");
                 Console.Read();
             }
             else
@@ -51,7 +50,7 @@ namespace PromotionEngine
             for (int i = 0; i < 2; i++)
             {
                 i = 0;
-                Console.WriteLine("Kindly enter the type of product:A,B,C or D");
+                Console.WriteLine("Kindly enter the product type:A,B,C or D");
                 string type = Console.ReadLine();
                 p = productService.GetPriceByProductType(new Product() { Id = type });
                 if (p.Price != null)
@@ -62,7 +61,6 @@ namespace PromotionEngine
                 {
                     Console.WriteLine("Entered product is not availbale");
                 }
-
             }
             return p;
         }

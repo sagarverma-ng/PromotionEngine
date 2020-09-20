@@ -10,3 +10,4 @@ C:\Users\User\source\repos\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3
 C:\Users\User\source\repos\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.dll
 C:\Users\User\source\repos\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.pdb
 C:\Users\User\source\repos\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.genruntimeconfig.cache
+C:\Users\User\source\repos\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.csprojAssemblyReference.cache

@@ -1,21 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace PromotionEngine
 {
-   public class ProductService: IProductService
+    public class ProductService : IProductService
     {
         public Product GetPriceByProductType(Product product)
         {
-            product.Price = product.Id.ToUpper() switch
+            if (product != null && !string.IsNullOrEmpty(product.Id))
             {
-                "A" => 50m,
-                "B" => 30m,
-                "C" => 20m,
-                "D" => 2015m,
-                _ => product.Price
-            };
+                product.Price = product.Id.ToUpper() switch
+                {
+                    "A" => 50m,
+                    "B" => 30m,
+                    "C" => 20m,
+                    "D" => 2015m,
+                    _ => product.Price
+                };
+            }
             return product;
         }
 
@@ -30,7 +34,7 @@ namespace PromotionEngine
             int countC = 0;
             int countD = 0;
 
-            foreach (Product pr in products)
+            foreach (Product pr in products ?? Enumerable.Empty<Product>())
             {
                 switch (pr.Id.ToUpper())
                 {
